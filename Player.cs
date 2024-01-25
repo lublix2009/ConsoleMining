@@ -8,14 +8,16 @@ namespace ConsoleMining
 {
     public class Player
     {
+        public int Monety { get; set; } = 10;
+        
         public int moc { get; set; } = 10;
         public string playername { get; set; } = "imie";
        // public int Hp { get; set; }
        public int Level { get; set; }
         public int wybur { get; set; }
-        public int wengiel { get; set; }
+        public int wengiel { get; set; } = 0;
 
-        public int wengie { get; set; }
+        public int Zelazo { get; set; } = 0;
 
         //kryptowaluty
         public double BTC { get; set; }

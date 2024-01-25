@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace ConsoleMining
 {
@@ -14,10 +14,16 @@ namespace ConsoleMining
         public Blok()
         {
         }
-
-        public void Kopanie()
+        public void CoSekunde()
         {
-           
+            TimerCallback timerCallback = Kopanie;
+            Timer timer = new Timer(timerCallback, null, 0, 1500);
+            Console.ReadLine();
+        }
+
+         static  void Kopanie(object state)
+        {
+
         }
     }
 
