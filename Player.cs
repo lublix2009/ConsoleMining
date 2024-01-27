@@ -8,16 +8,22 @@ namespace ConsoleMining
 {
     public class Player
     {
+        //bloki
+        Blok Wengiel = new Blok();
+        Blok Zelazo = new Blok();
+        Blok Złoto = new Blok();
+
+        //gracz
         public int Monety { get; set; } = 10;
-        
         public int moc { get; set; } = 10;
         public string playername { get; set; } = "imie";
-       // public int Hp { get; set; }
-       public int Level { get; set; }
+        public int HpGracza { get; set; }
+        public int Level { get; set; }
         public int wybur { get; set; }
-        public int wengiel { get; set; } = 0;
-
-        public int Zelazo { get; set; } = 0;
+        //ilość bloków
+        public int ilośćwengiel { get; set; } = 0;
+        public int ilośćzelazo { get; set; } = 0;
+        public int ilośćzłoto { get; set; } = 0;
 
         //kryptowaluty
         public double BTC { get; set; }

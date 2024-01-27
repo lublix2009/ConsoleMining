@@ -27,3 +27,4 @@ C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\refint\Co
 C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.pdb
 C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.genruntimeconfig.cache
 C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ref\ConsoleMining.dll
+C:\Users\krystian\Desktop\projekty\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.sourcelink.json

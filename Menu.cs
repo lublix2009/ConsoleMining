@@ -45,7 +45,29 @@ namespace ConsoleMining
         }
         public void sprzedaj()
         {
-             
+            int wybórsprzedaży;
+            int CenaWengla = 5;
+            int CenaZelaza = 20;
+            int CenaZłota = 50;
+            Console.WriteLine("Hej to tu możesz sprzedać swoje rudy");
+            Console.WriteLine();
+            Console.WriteLine("cennik");
+            Console.WriteLine("Węgiel - 5");
+            Console.WriteLine("Żelazo - 20");
+            Console.WriteLine("Złoto - 50");
+            Console.WriteLine();
+            Console.WriteLine("A w ekwipunku masz:");
+            Console.WriteLine("Węgiel - " + player.ilośćwengiel);
+            Console.WriteLine("Żelazo - " + player.ilośćzelazo);
+            Console.WriteLine("Złoto - " + player.ilośćzłoto);
+            Console.WriteLine();
+            Console.WriteLine("By sprzedać kliknij:");
+            Console.WriteLine("1 - Węgiel");
+            Console.WriteLine("2 - Żelazo");
+            Console.WriteLine("3 - Złoto");
+            
+
+
         }
     }
 }
