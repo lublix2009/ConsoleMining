@@ -9,16 +9,70 @@ namespace ConsoleMining
 {
     public class Block
     {
-        public int Hp = 100;
-        public int nagroda = 20;
-        public int Level = 1;
+
+       static Player player1 = new();
+
+        //właściwości bloka:
+        static public int Hp { get; set; } = 100;
+        static public int Level { get; set; } = 1;
+
+        //nagrody które daje:
+        static public int nagrodaMonety { get; set; } = 5;
+        public int nagrodapunkty = 10;
+
+        public int nagrodaWengla = 2;
+        public int nagrodaZelaza = 2;
+        public int nagrodaZłota  = 2;
 
 
-        public void WybórRudy()
+
+        static public void Kopanie(object state)
         {
-            Random random = new Random();
-            int ruda = random.Next(1, 4);
+           if(Hp <= 0)
+           {
+               
+                
+                    Random random = new Random();
+                    int ruda = random.Next(1, 4);
+                 switch (ruda)
+                 {
+                        case 1:
+                            {
+
+
+                                break;
+                            }
+                        case 2:
+                            {
+                                //wybrał żelazo
+
+                                break;
+                            }
+                        case 3:
+                            {
+                                //wybrał złoto
+
+                                break;
+                            }
+
+
+                 }
+                
+           }
+           else
+           {
+                Hp -= player1.moc;
+           }
+
         }
+
+
+       
+    
+
+
+
+
 
         public void timer()
         {
@@ -27,11 +81,13 @@ namespace ConsoleMining
             Console.ReadLine();
         }
 
-       static public void Kopanie(object state)
-        {
-           
-            Console.WriteLine("udało się");
-        }
+
+
+
+
+
+
+
     }
 
 

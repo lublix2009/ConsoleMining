@@ -10,8 +10,8 @@ namespace ConsoleMining
 
     public class Menu
     {
-        Player player = new Player();
-        Block blok = new Block();
+        Player player = new();
+        Block blok = new();
         
       public void PierwszeUruchomienie()
       {
@@ -46,12 +46,12 @@ namespace ConsoleMining
                     }
                     case "2"://sprzedaj
                     {
-                            sprzedaj();
+                            Sprzedaj();
                             break;
                     }
                     case "3"://sklep
                     {
-                            sklep();
+                            Sklep();
                            break;
                     }
                     case "4":
@@ -66,22 +66,20 @@ namespace ConsoleMining
             }
 
         }
-        public void sklep()
+        public void Sklep()
         {
 
         }
 
 
-        public void sprzedaj()
+        public void Sprzedaj()
         {
             while (true)
             {
 
 
                 Console.Clear();
-                int CenaWengla = 5;
-                int CenaZelaza = 20;
-                int CenaZłota = 50;
+
                 Console.WriteLine("Hej to tu możesz sprzedać swoje rudy");
                 Console.WriteLine();
                 Console.WriteLine("cennik");
@@ -104,18 +102,18 @@ namespace ConsoleMining
                 {
                     case "1":
                     {
-                        player.Monety += CenaWengla * player.ilośćwengiel;
+                        player.Monety += player.CenaWengla * player.ilośćwengiel;
                         player.ilośćwengiel = 0;
                         break;
                     }
                     case "2":
                     {
-                            player.Monety += CenaZelaza * player.ilośćzelazo;
+                            player.Monety += player.CenaZelaza * player.ilośćzelazo;
                             break;
                     }
                     case "3":
                     {
-                            player.Monety += CenaZłota * player.ilośćzłoto;
+                            player.Monety += player.CenaZłota * player.ilośćzłoto;
                             break;
                     }
                     case "4":
@@ -136,6 +134,8 @@ namespace ConsoleMining
         {
             Console.WriteLine("Oto twój profil oraz statystyki:");
             Console.WriteLine("Nick - " + player.playername);
+            Console.WriteLine("Masz Level : "+ player.Level);
+            Console.WriteLine("masz punktów :"+ player.Score);
 
         }
     }

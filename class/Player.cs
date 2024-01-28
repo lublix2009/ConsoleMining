@@ -11,6 +11,7 @@ namespace ConsoleMining
 
 
         //gracz
+        public int Score { get; set; } = 0;
         public int Monety { get; set; } = 0;
         public int moc { get; set; } = 10;
         public string playername { get; set; } = "imie";
@@ -21,6 +22,11 @@ namespace ConsoleMining
         public int ilośćwengiel { get; set; } = 10;
         public int ilośćzelazo { get; set; } = 10;
         public int ilośćzłoto { get; set; } = 10;
+
+        //cena bloków do sprzedaży
+        public int CenaWengla { get; set; } = 5;
+        public int CenaZelaza { get; set; } = 20;
+        public int CenaZłota { get; set; } = 50;
 
         //kryptowaluty
         public double BTC { get; set; }

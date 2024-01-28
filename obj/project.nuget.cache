@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oaq2MFAy0KTpwU5BA4q9184uuU7Z5IW8Dx4EBOFVo982LnsfMCx4GN/kRq5l5S4x88xhm0w9xuez168YnmJt4A==",
+  "dgSpecHash": "dPqZoWCHq0N9YRXkAx0B1SdhVCSlLHXNSkQekxawJr02LGNpbk6y7St2NXcjpPwb7KGxGo3vNkzpYP6DHtvDrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kryst\\Desktop\\PROJEKTY\\ConsoleMining\\ConsoleMining.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kryst\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\kryst\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\kryst\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\kryst\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\krystian\\Desktop\\projekty\\ConsoleMining\\ConsoleMining.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
