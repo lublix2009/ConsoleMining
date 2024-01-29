@@ -41,7 +41,8 @@ namespace ConsoleMining
                 {
                     case "1"://kopanie
                     {
-                            Block.timer();
+                           NoweOkno.UruchomKopanie();
+                           // Block.timer();
                             break;
                     }
                     case "2"://sprzedaj
