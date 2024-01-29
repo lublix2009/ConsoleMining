@@ -10,17 +10,17 @@ namespace ConsoleMining
 
     public class Menu
     {
-        Player player = new();
-        Block blok = new();
         
-      public void PierwszeUruchomienie()
+        
+      
+      static public void PierwszeUruchomienie()
       {
             Console.WriteLine("Witaj jak masz na imię?");
-            player.playername = Console.ReadLine();
+            Player.playername = Console.ReadLine();
             MenuWyboru();
       }
 
-        public void MenuWyboru()
+      static  public void MenuWyboru()
         {
 
             while(true)
@@ -31,17 +31,17 @@ namespace ConsoleMining
               Console.WriteLine("Jeśli chcesz sprzedać rudy wpisz: 2 ");
               Console.WriteLine("Jeśli chcesz kupić koparki wpisz: 3 ");
               Console.WriteLine("jeśli chcesz zobaczyć swój profil oraz statystyki wpisz: 4 ");
-                player.wybur = Console.ReadLine();
+                Player.wybur = Console.ReadLine();
 
             
             
 
 
-                switch (player.wybur)
+                switch (Player.wybur)
                 {
                     case "1"://kopanie
                     {
-                            blok.timer();
+                            Block.timer();
                             break;
                     }
                     case "2"://sprzedaj
@@ -66,13 +66,13 @@ namespace ConsoleMining
             }
 
         }
-        public void Sklep()
+        static public void Sklep()
         {
 
         }
 
 
-        public void Sprzedaj()
+        static public void Sprzedaj()
         {
             while (true)
             {
@@ -88,9 +88,9 @@ namespace ConsoleMining
                 Console.WriteLine("Złoto - 50");
                 Console.WriteLine();
                 Console.WriteLine("Obecnie w ekwipunku masz:");
-                Console.WriteLine("Węgiel - " + player.ilośćwengiel);
-                Console.WriteLine("Żelazo - " + player.ilośćzelazo);
-                Console.WriteLine("Złoto - " + player.ilośćzłoto);
+                Console.WriteLine("Węgiel - " + Player.ilośćwengiel);
+                Console.WriteLine("Żelazo - " + Player.ilośćzelazo);
+                Console.WriteLine("Złoto - " + Player.ilośćzłoto);
                 Console.WriteLine();
                 Console.WriteLine("By sprzedać wpisz:");
                 Console.WriteLine("1 - Węgiel");
@@ -102,18 +102,20 @@ namespace ConsoleMining
                 {
                     case "1":
                     {
-                        player.Monety += player.CenaWengla * player.ilośćwengiel;
-                        player.ilośćwengiel = 0;
+                        Player.Monety += Player.CenaWengla * Player.ilośćwengiel;
+                        Player.ilośćwengiel = 0;
                         break;
                     }
                     case "2":
                     {
-                            player.Monety += player.CenaZelaza * player.ilośćzelazo;
+                            Player.Monety += Player.CenaZelaza * Player.ilośćzelazo;
+                            Player.ilośćzelazo = 0;
                             break;
                     }
                     case "3":
                     {
-                            player.Monety += player.CenaZłota * player.ilośćzłoto;
+                            Player.Monety += Player.CenaZłota * Player.ilośćzłoto;
+                            Player.ilośćzłoto = 0;
                             break;
                     }
                     case "4":
@@ -130,12 +132,22 @@ namespace ConsoleMining
         }
 
 
-        public void Profil()
+        static public void Profil()
         {
             Console.WriteLine("Oto twój profil oraz statystyki:");
-            Console.WriteLine("Nick - " + player.playername);
-            Console.WriteLine("Masz Level : "+ player.Level);
-            Console.WriteLine("masz punktów :"+ player.Score);
+            Console.WriteLine("Nick - " + Player.playername);
+            Console.WriteLine("Masz Level: "+ Player.Level);
+            Console.WriteLine("Level Rud: " + Block.Level);
+            Console.WriteLine("twój wynik to: "+ Player.Score);
+            Console.WriteLine();
+            Console.WriteLine("Ekwipunek:");
+            Console.WriteLine("Monety: " + Player.Monety);
+            Console.WriteLine();
+            Console.WriteLine("Rudy:");
+            Console.WriteLine("Węgiel: " + Player.ilośćwengiel);
+            Console.WriteLine("Żelazo: " + Player.ilośćzelazo);
+            Console.WriteLine("Złoto: " + Player.ilośćzłoto);
+            Console.ReadKey();
 
         }
     }

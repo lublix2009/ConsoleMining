@@ -11,26 +11,26 @@ namespace ConsoleMining
 
 
         //gracz
-        public int Score { get; set; } = 0;
-        public int Monety { get; set; } = 0;
-        public int moc { get; set; } = 10;
-        public string playername { get; set; } = "imie";
-        public int HpGracza { get; set; }
-        public int Level { get; set; }
-        public string wybur { get; set; }
+       static public int Score { get; set; } = 0;
+       static public int Monety { get; set; } = 0;
+       static public int moc { get; set; } = 10;
+       static  public string playername { get; set; } = "imie";
+       static  public int HpGracza { get; set; }
+       static public int Level { get; set; }
+       static public string wybur { get; set; }
         //ilość bloków
-        public int ilośćwengiel { get; set; } = 10;
-        public int ilośćzelazo { get; set; } = 10;
-        public int ilośćzłoto { get; set; } = 10;
+       static  public int ilośćwengiel { get; set; } = 10;
+       static  public int ilośćzelazo { get; set; } = 10;
+       static public int ilośćzłoto { get; set; } = 10;
 
         //cena bloków do sprzedaży
-        public int CenaWengla { get; set; } = 5;
-        public int CenaZelaza { get; set; } = 20;
-        public int CenaZłota { get; set; } = 50;
+       static public int CenaWengla { get; set; } = 5;
+      static  public int CenaZelaza { get; set; } = 20;
+      static  public int CenaZłota { get; set; } = 50;
 
         //kryptowaluty
-        public double BTC { get; set; }
-        public double ETH { get; set; }
+       // public double BTC { get; set; }
+       // public double ETH { get; set; }
 
 
 
