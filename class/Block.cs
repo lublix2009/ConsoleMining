@@ -21,128 +21,105 @@ namespace ConsoleMining
         //nagrody które daje:
         static public int nagrodapunkty = 10;
 
-        static public int nagrodaWengla = 2;
+        static public int nagrodaWengla = 4;
         static public int nagrodaZelaza = 2;
-        static public int nagrodaZłota  = 2;
+        static public int nagrodaZłota  = 1;
 
 
 
-        static public void Kopanie(object state)
+        static public void Kopanie()
         {
-           if(Hp <= 0)
-           {
-               
-                
+            while (true)
+            {
+
+
+                if (Hp <= 0)
+                {
+
+
                     Random random = new Random();
                     int ruda = random.Next(1, 4);
-                 switch (ruda)
-                 {
+                    switch (ruda)
+                    {
                         case 1:
                             {
-                            // wybrał wengiel
-                             Player.ilośćwengiel += Block.nagrodaWengla;
-                            Player.Score += Block.nagrodapunkty;
-                            Block.Hp += Block.DodawanieHpBlokowi;
-                            Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaWengla + " węgla!");
-                            Console.WriteLine("Wpisz:");
-                            Console.WriteLine("1 - wyjdz");
-                            Console.WriteLine("2 - Kontynuj");
-                            string WyjdzZKopania = Console.ReadLine();
-                            switch (WyjdzZKopania)
-                            {
-                                case "1":
-                                {
-                                       Menu.MenuWyboru();
-                                       break;
-                                }
-                                case "2":
-                                    {
-                                        Block.timer();
-                                        break;
-                                    }
-                            }
-
-                            break;
+                                // wylosowano węgiel
+                                Player.ilośćwengiel += Block.nagrodaWengla;
+                                Player.Score += Block.nagrodapunkty;
+                                Block.Hp += Block.DodawanieHpBlokowi;
+                                Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaWengla + " węgla!");
+                                Block.WyjścieZKopania();
+                                break;
                             }
                         case 2:
                             {
-                            //wybrał żelazo
-                            Player.ilośćzelazo += Block.nagrodaZelaza;
-                            Player.Score += Block.nagrodapunkty;
-                            Block.Hp += Block.DodawanieHpBlokowi;
-                            Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaZelaza + " Żelaza!");
-                            Console.WriteLine("Wpisz:");
-                            Console.WriteLine("1 - wyjdz");
-                            Console.WriteLine("2 - Kontynuj");
-                             string WyjdzZKopania = Console.ReadLine();
-                            switch (WyjdzZKopania)
-                            {
-                                case "1":
-                                    {
-                                        Menu.MenuWyboru();
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        Block.timer();
-                                        break;
-                                    }
-                            }
-                            break;
+                                //wylosowano żelazo
+                                Player.ilośćzelazo += Block.nagrodaZelaza;
+                                Player.Score += Block.nagrodapunkty;
+                                Block.Hp += Block.DodawanieHpBlokowi;
+                                Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaZelaza + " Żelaza!");
+                                Block.WyjścieZKopania();
+                                break;
                             }
                         case 3:
                             {
-                            //wybrał złoto
-                            Player.ilośćzłoto += Block.nagrodaZłota;
-                            Player.Score += Block.nagrodapunkty;
-                            Block.Hp += Block.DodawanieHpBlokowi;
-                            Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaZłota + " Złota!");
-                            Console.WriteLine("Wpisz:");
-                            Console.WriteLine("1 - wyjdz");
-                            Console.WriteLine("2 - Kontynuj");
-                            string WyjdzZKopania = Console.ReadLine();
-                            switch (WyjdzZKopania)
-                            {
-                                case "1":
-                                    {
-                                        Menu.MenuWyboru();
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        Block.timer();
-                                        break;
-                                    }
-                            }
-                            break;
+                                //wybrał złoto
+                                Player.ilośćzłoto += Block.nagrodaZłota;
+                                Player.Score += Block.nagrodapunkty;
+                                Block.Hp += Block.DodawanieHpBlokowi;
+                                Console.WriteLine("Gratulacje wykopałeś : " + Block.nagrodaZłota + " Złota!");
+                                Block.WyjścieZKopania();
+                                break;
                             }
 
 
-                 }
-                
-           }
-           else
-           {
-                Hp -= Player.moc;
-                Console.WriteLine("kopiesz...");
+                    }
+
+                }
+                else
+                {
+                    Console.Clear();
+                    Hp -= Player.moc;
+                    Console.WriteLine("Kopanie...");
+                    Console.WriteLine(Block.Hp + "/"+ Block.DodawanieHpBlokowi);
+                    Thread.Sleep(1500);
+                }
+
             }
+
 
         }
 
 
-       
+            public static void WyjścieZKopania()
+            {
+                Console.WriteLine("Wpisz:");
+                Console.WriteLine("1 - wyjdz");
+                Console.WriteLine("2 - Kontynuj");
+                string WyjdzZKopania = Console.ReadLine();
+                switch (WyjdzZKopania)
+                {
+                    case "1":
+                        {
+                            Player.LevelUp();
+                            break;
+                        }
+                    case "2":
+                        {
+                            Console.Clear();
+                            Block.Kopanie();
+                            break;
+                        }
+                }
+            }
+        }
+    }
      
 
 
 
 
 
-      static  public void timer()
-      {
-            TimerCallback timerCallback = Kopanie;
-            Timer timer = new Timer(timerCallback, null, 0, 1500);
-            Console.ReadLine();
-      }
 
 
 
@@ -151,11 +128,13 @@ namespace ConsoleMining
 
 
 
-    }
+
+
+    
 
 
 
     
      
 
-}  
+ 

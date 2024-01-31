@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleMining")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba769c496a5dac2bdb32947c34b5b470ece5bd1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e99f623552d6e520ebaf56c61b1c28074f7f233")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleMining")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleMining")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1")]

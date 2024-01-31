@@ -34,15 +34,12 @@ namespace ConsoleMining
                 Player.wybur = Console.ReadLine();
 
             
-            
-
-
                 switch (Player.wybur)
                 {
                     case "1"://kopanie
                     {
-                           NoweOkno.UruchomKopanie();
-                           // Block.timer();
+                            Console.Clear();
+                            Block.Kopanie();
                             break;
                     }
                     case "2"://sprzedaj
@@ -52,7 +49,7 @@ namespace ConsoleMining
                     }
                     case "3"://sklep
                     {
-                            Sklep();
+                            
                            break;
                     }
                     case "4":
@@ -67,10 +64,7 @@ namespace ConsoleMining
             }
 
         }
-        static public void Sklep()
-        {
 
-        }
 
 
         static public void Sprzedaj()
@@ -84,9 +78,9 @@ namespace ConsoleMining
                 Console.WriteLine("Hej to tu możesz sprzedać swoje rudy");
                 Console.WriteLine();
                 Console.WriteLine("cennik");
-                Console.WriteLine("Węgiel - 5");
-                Console.WriteLine("Żelazo - 20");
-                Console.WriteLine("Złoto - 50");
+                Console.WriteLine("Węgiel - 2");
+                Console.WriteLine("Żelazo - 5");
+                Console.WriteLine("Złoto - 15");
                 Console.WriteLine();
                 Console.WriteLine("Obecnie w ekwipunku masz:");
                 Console.WriteLine("Węgiel - " + Player.ilośćwengiel);
@@ -105,6 +99,7 @@ namespace ConsoleMining
                     {
                         Player.Monety += Player.CenaWengla * Player.ilośćwengiel;
                         Player.ilośćwengiel = 0;
+                        
                         break;
                     }
                     case "2":
@@ -121,7 +116,7 @@ namespace ConsoleMining
                     }
                     case "4":
                     {
-                            MenuWyboru();
+                            Player.LevelUp();
                             break;
                     }
 
@@ -135,6 +130,7 @@ namespace ConsoleMining
 
         static public void Profil()
         {
+            Console.Clear();
             Console.WriteLine("Oto twój profil oraz statystyki:");
             Console.WriteLine("Nick - " + Player.playername);
             Console.WriteLine("Masz Level: "+ Player.Level);
