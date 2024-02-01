@@ -49,7 +49,7 @@ namespace ConsoleMining
                     }
                     case "3"://sklep
                     {
-                            
+                            Sklep.Kupowanie(); 
                            break;
                     }
                     case "4":
@@ -78,14 +78,16 @@ namespace ConsoleMining
                 Console.WriteLine("Hej to tu możesz sprzedać swoje rudy");
                 Console.WriteLine();
                 Console.WriteLine("cennik");
-                Console.WriteLine("Węgiel - 2");
-                Console.WriteLine("Żelazo - 5");
-                Console.WriteLine("Złoto - 15");
+                Console.WriteLine("Węgiel - " + Player.CenaWengla);
+                Console.WriteLine("Żelazo - " + Player.CenaZelaza);
+                Console.WriteLine("Złoto - " + Player.CenaZłota);
                 Console.WriteLine();
                 Console.WriteLine("Obecnie w ekwipunku masz:");
                 Console.WriteLine("Węgiel - " + Player.ilośćwengiel);
                 Console.WriteLine("Żelazo - " + Player.ilośćzelazo);
                 Console.WriteLine("Złoto - " + Player.ilośćzłoto);
+                Console.WriteLine();
+                Console.WriteLine("Monety - " + Player.Monety);
                 Console.WriteLine();
                 Console.WriteLine("By sprzedać wpisz:");
                 Console.WriteLine("1 - Węgiel");
@@ -134,7 +136,7 @@ namespace ConsoleMining
             Console.WriteLine("Oto twój profil oraz statystyki:");
             Console.WriteLine("Nick - " + Player.playername);
             Console.WriteLine("Masz Level: "+ Player.Level);
-            Console.WriteLine("Level Rud: " + Block.Level);
+            Console.WriteLine("Masz mocy: " + Player.moc);
             Console.WriteLine("twój wynik to: "+ Player.Score);
             Console.WriteLine();
             Console.WriteLine("Ekwipunek:");

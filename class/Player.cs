@@ -19,6 +19,7 @@ namespace ConsoleMining
        static public int Level { get; set; }
        static public string wybur { get; set; }
         static public int PunktyDoNastępnegoPozimomu { get; set; } = 50;
+        static public int PoziomDoPowiększeniaCen { get; set; } = 5;
         public static int IlośćPrzedmiotów { get; set; }
 
         //ilość bloków
@@ -38,6 +39,7 @@ namespace ConsoleMining
         {
           if(PunktyDoNastępnegoPozimomu <= Score)
           {
+                
                 Console.Clear();
                 Level++;
                 PunktyDoNastępnegoPozimomu = PunktyDoNastępnegoPozimomu * 2;
@@ -45,6 +47,8 @@ namespace ConsoleMining
                 Console.WriteLine("Gratulacje osiągnołeś Poziom " +Level);
                 Thread.Sleep(3000);
                 Menu.MenuWyboru();
+                
+
           }
           else
           {

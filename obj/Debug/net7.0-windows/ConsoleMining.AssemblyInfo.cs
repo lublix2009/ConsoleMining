@@ -13,11 +13,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleMining")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e99f623552d6e520ebaf56c61b1c28074f7f233")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fde2309e55d6c07d7ed80f244ecf97c18e558e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleMining")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleMining")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.1")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.9.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 

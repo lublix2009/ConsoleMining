@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleMining
 {
-    internal class Sell
+    public class Sell
     {
+
     }
 }
