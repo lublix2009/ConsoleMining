@@ -28,3 +28,6 @@ C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMi
 C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.genruntimeconfig.cache
 C:\Users\kryst\Desktop\PROJEKTY\ConsoleMining\obj\Debug\net7.0-windows\ref\ConsoleMining.dll
 C:\Users\krystian\Desktop\projekty\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.sourcelink.json
+C:\Users\krystian\Desktop\projekty\ConsoleMining\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\krystian\Desktop\projekty\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.csproj.AssemblyReference.cache
+C:\Users\krystian\Desktop\projekty\ConsoleMining\obj\Debug\net7.0-windows\ConsoleMining.csproj.CopyComplete
