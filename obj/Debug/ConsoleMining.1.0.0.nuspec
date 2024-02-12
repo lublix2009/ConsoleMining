@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ConsoleMining</id>
+    <version>1.0.0</version>
+    <title>ConsoleMining</title>
+    <authors>ConsoleMining</authors>
+    <description>Package Description</description>
+    <repository type="github" commit="15dc8b3b5322d8bb3afa7c0df8d8bed09ce8d5a2" />
+    <dependencies>
+      <group targetFramework="net7.0-windows7.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net7.0-windows7.0/pixcake.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\krystian\Desktop\projekty\ConsoleMining\bin\Debug\net7.0-windows\ConsoleMining.runtimeconfig.json" target="lib\net7.0-windows7.0\ConsoleMining.runtimeconfig.json" />
+    <file src="C:\Users\krystian\Desktop\projekty\ConsoleMining\bin\Debug\net7.0-windows\ConsoleMining.dll" target="lib\net7.0-windows7.0\ConsoleMining.dll" />
+    <file src="C:\Users\krystian\Desktop\projekty\ConsoleMining\pixcake.ico" target="content\pixcake.ico" />
+    <file src="C:\Users\krystian\Desktop\projekty\ConsoleMining\pixcake.ico" target="contentFiles\any\net7.0-windows7.0\pixcake.ico" />
+  </files>
+</package>

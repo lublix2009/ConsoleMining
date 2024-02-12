@@ -1,0 +1,6 @@
+C:\Users\krystian\Desktop\ConsoleMining\ConsoleMining.exe
+C:\Users\krystian\Desktop\ConsoleMining\ConsoleMining.dll
+C:\Users\krystian\Desktop\ConsoleMining\ConsoleMining.deps.json
+C:\Users\krystian\Desktop\ConsoleMining\ConsoleMining.runtimeconfig.json
+C:\Users\krystian\Desktop\ConsoleMining\ConsoleMining.pdb
+C:\Users\krystian\Desktop\ConsoleMining\Newtonsoft.Json.dll

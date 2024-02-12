@@ -14,10 +14,10 @@ namespace ConsoleMining
             Console.WriteLine("--------------------------------------------------------");
             Console.WriteLine("                        Kopalnia                        ");
             Console.WriteLine("Wpisz Liczbe by zacząć Kopać wybraną rudę               ");
-            Console.WriteLine("Wpisz 1 - Bursztyn  |Hp: 50                             ");
-            Console.WriteLine("Wpisz 2 - Węgiel    |Hp: 100                            ");
-            Console.WriteLine("Wpisz 3 - Zelazo    |Hp: 200                            ");
-            Console.WriteLine("Wpisz 4 - Złoto     |Hp: 500                            ");
+            Console.WriteLine("Wpisz 1 - Ruda Bursztynu |Hp: 50                        ");
+            Console.WriteLine("Wpisz 2 - Ruda Węgla     |Hp: 100                       ");
+            Console.WriteLine("Wpisz 3 - Ruda Zelaza    |Hp: 200                       ");
+            Console.WriteLine("Wpisz 4 - Ruda Złota     |Hp: 500                       ");
             Console.WriteLine("Wpisz 5 - Wyjdz                                         ");
             Console.WriteLine("--------------------------------------------------------");
             string WybieranieRudy = Console.ReadLine();
@@ -43,7 +43,7 @@ namespace ConsoleMining
                                     int nagrodaBursztynu = random.Next(1, 31);
                                     Console.Clear();
                                     IlośćPowturzeńInt -= 1;
-                                    Player.ilośćbursztynu += nagrodaBursztynu;
+                                    Player.RudyBursztynu += nagrodaBursztynu;
                                     Player.Score += Player.nagrodapunkty;
                                     HpBursztynu = DodawanieHpBursztynowi;
                                     Console.WriteLine("Gratulacje wykopałeś : " + nagrodaBursztynu + " Bursztynu");
@@ -94,7 +94,7 @@ namespace ConsoleMining
                                     int nagrodaWengla = random.Next(1,11);
                                     Console.Clear();
                                     IlośćPowturzeńInt -= 1;
-                                    Player.ilośćwengiel += nagrodaWengla;
+                                    Player.RudyWęgla += nagrodaWengla;
                                     Player.Score += Player.nagrodapunkty;
                                     HpWengla = DodawanieHpWenglowi;
                                     Console.WriteLine("Gratulacje wykopałeś : " + nagrodaWengla + " węgla!");
@@ -145,7 +145,7 @@ namespace ConsoleMining
                                     int nagrodaZelaza = random.Next(1, 6);
                                     Console.Clear();
                                     IlośćPowturzeńInt -= 1;
-                                    Player.ilośćzelazo += nagrodaZelaza;
+                                    Player.RudyŻelaza += nagrodaZelaza;
                                     Player.Score += Player.nagrodapunkty;
                                     HpZelaza = DodawanieHpzelazowi;
                                     Console.WriteLine("Gratulacje wykopałeś : " + nagrodaZelaza + " Żelaza!");
@@ -197,7 +197,7 @@ namespace ConsoleMining
                                     int nagrodaZłota = random.Next(1, 5);
                                     Console.Clear();
                                     IlośćPowturzeńInt -= 1;
-                                    Player.ilośćzłoto += nagrodaZłota;
+                                    Player.RudyZłota += nagrodaZłota;
                                     Player.Score += Player.nagrodapunkty;
                                     HpZłota = DodawanieHpZłota;
                                     Console.WriteLine("Gratulacje wykopałeś : " + nagrodaZłota + " Złota!");

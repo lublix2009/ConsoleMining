@@ -30,9 +30,10 @@ namespace ConsoleMining
               Console.WriteLine("                         Menu Główne                          ");
               Console.WriteLine(" Kopalnia   : 1                                               ");
               Console.WriteLine(" Rynek      : 2                                               ");
-              Console.WriteLine(" Sklep      : 3                                               ");
-              Console.WriteLine(" Kowal      : 4                                               ");
+              Console.WriteLine(" Kowal      : 3                                               ");
+              Console.WriteLine(" Ekwipunek  : 4                                               ");
               Console.WriteLine(" Profil     : 5                                               ");
+              Console.WriteLine("Wpisz odpowiednią liczbę                                      ");
               Console.WriteLine("--------------------------------------------------------------");
               Player.wybur = Console.ReadLine();
 
@@ -43,30 +44,57 @@ namespace ConsoleMining
                     {
                           
                             Console.Clear();
-                            //Block.Kopanie();
+                           
                             Kopanie.WybórRudy();
                             break;
                     }
-                    case "2"://sprzedaj
+                    case "2"://rynek
                     {
-                            
-                            Sell.Sprzedaj();
+
+                            Rynek();
                             break;
                     }
                     case "3"://sklep
                     {
-                            
-                            Sklep.Kupowanie(); 
+
+                            Kowal.kowal();
                            break;
                     }
                     case "4":
                     {
-                            Kowal.kowal();
+                            Menu.Ekwipunek();
                             break;
                     }
                     case "5":
                         {
                             Profil();
+                            break;
+                        }
+                    case "LublixTV":
+                        {
+                            if(Player.tajnykod == true)
+                            {
+                                Player.moc += 100;
+                                Player.Monety += 5000;
+                                Player.tajnykod = false;
+                                Console.WriteLine("Widać że oglądasz mó kanał, w nagrode dostaniesz dużo kasy");
+                                Thread.Sleep(4000);
+                            }
+                            else
+                            {
+                                Console.WriteLine(" Bonus masz już odebrany. Drugi raz nie możesz odebrać.");
+                                Thread.Sleep(4000);
+                            }
+                            break;
+                        }
+                    case "AdminLogin":
+                        {
+                            Console.WriteLine("Podaj Hasło");
+                            string haslo = Console.ReadLine();
+                            if(haslo == "krykro11")
+                            {
+
+                            }
                             break;
                         }
                         
@@ -94,10 +122,10 @@ namespace ConsoleMining
             Console.WriteLine("Monety: " + Player.Monety                            );
             Console.WriteLine(                                                      );
             Console.WriteLine("Rudy:                                               ");
-            Console.WriteLine("Bursztyn: " + Player.ilośćbursztynu                  );
-            Console.WriteLine("Węgiel: " + Player.ilośćwengiel                      );
-            Console.WriteLine("Żelazo: " + Player.ilośćzelazo                       );
-            Console.WriteLine("Złoto: " + Player.ilośćzłoto                         );
+            Console.WriteLine("Bursztyn: " + Player.RudyBursztynu                   );
+            Console.WriteLine("Węgiel: " + Player.RudyWęgla                         );
+            Console.WriteLine("Żelazo: " + Player.RudyŻelaza                        );
+            Console.WriteLine("Złoto: " + Player.RudyZłota                          );
             Console.WriteLine("----------------------------------------------------");
             Console.ReadKey();
 
@@ -124,6 +152,63 @@ namespace ConsoleMining
                 Menu.MenuGłówne();
 
             }
+        }
+
+
+        public static void Rynek()
+        {
+            Console.Clear();
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("                        Rynek                       ");
+            Console.WriteLine("Co chcesz zrobić?                                   ");
+            Console.WriteLine(" Kupić     : 1                                      ");
+            Console.WriteLine(" Sprzedać  : 2                                      ");
+            Console.WriteLine("----------------------------------------------------");
+            string Rynekwybur = Console.ReadLine();
+            switch (Rynekwybur)
+            {
+                case "1":
+                    {
+                        Sklep.Kupowanie();
+                        break;
+                    }
+                case "2":
+                    {
+                        Sell.Sprzedaj();
+                        break;
+                    } 
+                    
+            }
+        }
+
+        public static void Ekwipunek()
+        {
+            Console.Clear();
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("                      Ekwipunek                       ");
+            Console.WriteLine(" Rudy Minerałów:                                      ");
+            Console.WriteLine(" Ruda Bursztynu - " + Player.RudyBursztynu             );
+            Console.WriteLine(" Ruda Węgla     - " + Player.RudyWęgla                 );
+            Console.WriteLine(" Ruda Żelaza    - " + Player.RudyŻelaza                );
+            Console.WriteLine(" Ruda Złota     - " + Player.RudyZłota                 );
+            Console.WriteLine("                                                      ");
+            Console.WriteLine(" Oszlifowane Minerały:"                                );
+            Console.WriteLine(" Bursztyn       - " + Player.Bursztyn                  ); 
+            Console.WriteLine(" Węgiel         - " + Player.Węgiel                    );
+            Console.WriteLine(" Sztabka Żelaza - " + Player.Żelazo                    );
+            Console.WriteLine(" Sztabka Złota  - " + Player.Złoto                     );
+            Console.WriteLine("                                                      ");
+            Console.WriteLine(" Kilofy :                                             ");
+            Console.WriteLine(" Kilof Drewniany   - " + Player.KilofDrewniany         );
+            Console.WriteLine(" Kilof Bursztynowy - " + Player.KilofBursztynowy       );
+            Console.WriteLine(" Kilof Żelazny     - " + Player.KilofŻelazny           );
+            Console.WriteLine(" Kilof Złoty       - " + Player.KilofZłoty             );
+            Console.WriteLine("------------------------------------------------------");
+            Console.ReadKey();
+        }
+        private void AdminPanel()
+        {
+
         }
     }
 }

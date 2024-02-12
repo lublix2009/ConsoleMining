@@ -15,7 +15,7 @@ namespace ConsoleMining
 
                 Console.Clear();
                 Console.WriteLine("------------------------------------------------");
-                Console.WriteLine("                      Sklep                     ");
+                Console.WriteLine("                      Rynek                     ");
                 Console.WriteLine("Monety - " + Player.Monety                       );
                 Console.WriteLine("Posiadasz "+ Player.IlośćPrzedmiotów + " kilofów");
                 Console.WriteLine("By wybrać przedmiot wpisz:                      ");
@@ -35,6 +35,7 @@ namespace ConsoleMining
                                 Player.moc += 5;
                                 Player.Monety -= 50;
                                 Player.IlośćPrzedmiotów++;
+                                Player.KilofDrewniany++;
                                 Console.WriteLine("Gratulacje kupiłeś Drewniany Kilof.");
                                 Thread.Sleep(2000);
                                 Console.Clear();
@@ -54,6 +55,7 @@ namespace ConsoleMining
                                 Player.moc += 10;
                                 Player.Monety -= 100;
                                 Player.IlośćPrzedmiotów++;
+                                Player.KilofBursztynowy++;
                                 Console.WriteLine("Gratulacje kupiłeś Bursztynowy Kilof.");
                                 Thread.Sleep(2000);
                                 Console.Clear();
@@ -73,6 +75,7 @@ namespace ConsoleMining
                                 Player.moc += 20;
                                 Player.Monety -= 200;
                                 Player.IlośćPrzedmiotów++;
+                                Player.KilofŻelazny++;
                                 Console.WriteLine("Gratulacje kupiłeś Żelazny Kilof.");
                                 Thread.Sleep(2000);
                                 Console.Clear();
@@ -92,6 +95,7 @@ namespace ConsoleMining
                                 Player.moc += 40;
                                 Player.Monety -= 400;
                                 Player.IlośćPrzedmiotów++;
+                                Player.KilofZłoty++;
                                 Console.WriteLine("Gratulacje kupiłeś Złoty Kilof.");
                                 Thread.Sleep(2000);
                                 Console.Clear();

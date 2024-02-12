@@ -10,14 +10,30 @@ namespace ConsoleMining
     {
       public static void kowal()
         {
-            Console.Clear();
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("                      Kowal                      ");
-            Console.WriteLine("                                                 ");
-            Console.WriteLine("                   Już Wkrótce                   ");
-            Console.WriteLine("                                                 ");
-            Console.WriteLine("-------------------------------------------------");
-            Console.ReadKey();
+
+            while (true)
+            {
+                if(Player.Level >= 10)
+                {
+                    Console.Clear();
+                    Console.WriteLine("-------------------------------------------------");
+                    Console.WriteLine("                      Kowal                      ");
+                    Console.WriteLine("                                                 ");
+                    Console.WriteLine("                                                 ");
+                    Console.WriteLine("                                                 ");
+                    Console.WriteLine("-------------------------------------------------");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Sorry musisz mieć 10 poziom lub większy by tu wejść :(");
+                    Thread.Sleep(5000);
+                    Menu.MenuGłówne();
+
+                }
+            }
+
         }
     }
 }

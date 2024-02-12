@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleMining")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15dc8b3b5322d8bb3afa7c0df8d8bed09ce8d5a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleMining")]
